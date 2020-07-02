@@ -1,0 +1,106 @@
+<html>
+    <head>
+        <meta charset="utf-8" />
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+<title>Webpage</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+
+<script src="main.js"></script>
+
+    </head>
+    <body background=blue>
+        <header>Shubham Banerjee</header>
+        <hr>
+        <div>
+            <p>I am 4th Year Student persuing my B.Tech in Computer Science from <b>Kalinga Institute of Industrial Technology.</b>
+                I am aspire to become a Data Scientist one day.I also have the skills to work on Flutter which is a native development platform for both android and IOS.
+            </p>
+            <ol>
+                <li>Compiler Design</li>
+                <li>Computer Graphics</li>
+                <li>Object Oriented System Design</li>
+                <li>Big Data</li>
+                <li>Quantum Mechanics</li>
+
+            </ol>
+
+            <ul>
+                <li>Playing Guitar</li>
+                <li>Football Freak</li>
+                <li>Sketching</li>
+            </ul>
+
+
+            <table>
+                <tr>
+                    <td>Memories</td>
+                    <td>Marroon5</td>
+                </tr>
+                <tr>
+                    <td>All of the stars</td>
+                    <td>ED Sheeran</td>
+                </tr>
+                <tr>
+                    <td>On my way</td>
+                    <td>Alan Walker</td>
+                </tr>
+                <tr>
+                    <td>Here with me</td>
+                    <td>Marshmello</td>
+                </tr>
+
+            </table>
+
+            Email - <a href = "mailto: shubhambanerjee100@gmail.com">Send Email</a>
+Whatsapp - <a href = "https://api.whatsapp.com/send?phone=8130335256"> Whatsapp Here </a>
+Phone call - <a href = "tel:8130335256"> Call Here </a>
+
+        </div>
+
+        <div>
+            p>Document content goes here...</p>
+            <iframe id="if1" width="100%" height="254" style="visibility:visible" src="http://www.google.com/custom?q=&btnG=Search"></iframe>
+        </iframe>
+         Sorry your browser does not support inline frames.
+         <script>
+         var iframe = document.getElementsByTagName('iframe')[0];
+var url = iframe.src;
+var getData = function (data) {
+ if (data && data.query && data.query.results && data.query.results.resources && data.query.results.resources.content && data.query.results.resources.status == 200) loadHTML(data.query.results.resources.content);
+ else if (data && data.error && data.error.description) loadHTML(data.error.description);
+ else loadHTML('Error: Cannot load ' + url);
+};
+var loadURL = function (src) {
+ url = src;
+ var script = document.createElement('script');
+ script.src = 'http://query.yahooapis.com/v1/public/yql?q=select%20*%20from%20data.headers%20where%20url%3D%22' + encodeURIComponent(url) + '%22&format=json&diagnostics=true&env=store%3A%2F%http://2Fdatatables.org%2Falltableswithkeys&callback=getData';
+ document.body.appendChild(script);
+};
+var loadHTML = function (html) {
+ iframe.src = 'about:blank';
+ iframe.contentWindow.document.open();
+ iframe.contentWindow.document.write(html.replace(/<head>/i, '<head><base href="' + url + '"><scr' + 'ipt>document.addEventListener("click", function(e) { if(e.target && e.target.nodeName == "A") { e.preventDefault(); parent.loadURL(e.target.href); } });</scr' + 'ipt>'));
+ iframe.contentWindow.document.close();
+}
+loadURL(iframe.src);	
+       
+    </script>    
+      <p>Document content also go here...</p>
+
+        </div>
+        <div>
+            <form action="submit" autocomplete="on"> 
+                Name<input type="text" autocomplete="name" autocapitalize="on"><br>
+                Roll NO<input type="number" autocomplete="name" autocapitalize="on"><br>
+                Message <textarea name="message" id="" cols="10" rows="1"></textarea><br>
+                <button>submit</button>
+
+            </form>
+        </div>
+    </body>
+</html>
